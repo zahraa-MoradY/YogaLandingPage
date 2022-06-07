@@ -1,0 +1,248 @@
+@media (max-width:1280px) {
+    menu,
+    menu .right {
+        gap: 80px;
+    }
+}
+
+@media (max-width:1080px) {
+    menu,
+    menu .right {
+        gap: 40px;
+    }
+    /* footer */
+    .footer-content-left,
+    .footer-content-right,
+    .privacy,
+    .copy-right {
+        width: 40%;
+    }
+}
+
+@media (max-width:990px) {
+    /* menu and icon */
+    .menu-icon {
+        display: flex;
+    }
+    menu {
+        justify-content: space-around;
+    }
+    menu .list-items {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    menu .right {
+        position: absolute;
+        top: 42px;
+        justify-content: space-between;
+        text-align: center;
+        background-color: var(--lightColor, #ffffff);
+        width: 100%;
+        flex-direction: column;
+    }
+    menu .right,
+    menu .navbar ul {
+        overflow: hidden;
+        gap: 1rem;
+        height: 0;
+        transition: height 1.4s;
+    }
+    menu .right.show {
+        height: 300px;
+        transition: height 1.4s;
+    }
+    menu .navbar ul.show {
+        height: 240px;
+        transition: all 1.4s;
+    }
+    .register-btn {
+        justify-content: center;
+    }
+    /* cards */
+    .cards-item-container {
+        width: calc(50% - 20px);
+    }
+    /* TEXT BANNER */
+    .text-banner .content h2 {
+        font-size: 40px;
+    }
+    .second-banner .main {
+        justify-content: center;
+    }
+    .second-banner .main .content {
+        width: 80%;
+    }
+    .second-banner .main .content-image {
+        width: 80%;
+    }
+    /* online class */
+    .online-class-moreAbout .learn-more {
+        width: 60%;
+    }
+    /* footer */
+    .privacy,
+    .copy-right {
+        width: 50%;
+    }
+}
+
+@media(max-width:768px) {
+    .bannerContent .textcontent {
+        line-height: 69px;
+    }
+    .bannerContent h1 {
+        font-size: 40px;
+    }
+    /* cards */
+    .cards-item-container {
+        width: calc(70% - 20px);
+        margin: 15px auto;
+    }
+    /* text BANNER */
+    .text-banner .content {
+        width: 80%;
+    }
+    /* video */
+    /* title */
+    .title {
+        width: 80%;
+    }
+    .title h1 {
+        font-size: 45px;
+    }
+    /* play/pause icon */
+    .play-icon {
+        width: 74px;
+        height: 74px;
+        top: calc( 50% - 35px);
+        left: calc( 50% - 35px);
+    }
+    /* online class  */
+    .class-Schedules-content {
+        width: 90%;
+    }
+    .class-Schedules-content .btn {
+        padding: 10px 0;
+    }
+    .class-Schedules-content .smallBtn {
+        width: 200px;
+    }
+    .class-Schedules h3 {
+        font-size: 1.8em;
+    }
+    /* online class */
+    .online-class-moreAbout .learn-more {
+        width: 80%;
+    }
+    /* footer */
+    .footer-bottom-row-content {
+        justify-content: center;
+    }
+    .footer-content-main {
+        justify-content: center;
+        padding-top: 25px;
+    }
+    .footer-content-left,
+    .footer-content-right,
+    .privacy,
+    .copy-right {
+        width: 80%;
+    }
+    .copy-right {
+        text-align: center;
+    }
+}
+
+@media (max-width:540px) {
+    .container {
+        width: 100%;
+    }
+    header .left-image {
+        display: none;
+    }
+    header .right-image {
+        bottom: 50px;
+        right: 0;
+    }
+    /* BANNER */
+    .bannerContent .textcontent {
+        line-height: 60px;
+    }
+    .bannerContent p {
+        line-height: 40px;
+    }
+    .bannerContent h1 {
+        font-size: 30px;
+    }
+    .smallBtn,
+    .largeBtn {
+        width: 190px;
+        height: 30px;
+    }
+    /* text BANNER */
+    .text-banner .content {
+        width: 90%;
+    }
+    .text-banner .content h2 {
+        font-size: 35px;
+        line-height: 40px;
+    }
+    /* video */
+    /* title */
+    .title {
+        width: 90%;
+    }
+    .title h1 {
+        font-size: 35px;
+        line-height: 59px;
+    }
+    /* play/pause icon */
+    .play-icon {
+        width: 54px;
+        height: 54px;
+        top: calc( 50% - 25px);
+        left: calc( 50% - 25px);
+    }
+    /* online class  */
+    .online-class-cards .item .content h3,
+    .class-Schedules h3 {
+        font-size: 1.5em;
+    }
+    .online-class-cards .item .content h1 {
+        font-size: 3em;
+        line-height: 80px;
+    }
+    /* footer */
+    .privacy,
+    .copy-right {
+        font-size: 14px;
+    }
+}
+
+@media (max-width:480px) {
+    .cards-item-container {
+        width: calc(85% - 20px);
+        margin: 15px auto;
+    }
+    /* TEXT BANNER */
+    .text-banner .content h2 {
+        font-size: 28px;
+    }
+    /* online class */
+    .online-class-moreAbout .learn-more {
+        width: 100%;
+    }
+    .class-Schedules-content {
+        flex-direction: column;
+    }
+    /* footer */
+    .links a {
+        width: 30%;
+    }
+    .footer-content-right {
+        flex-direction: column;
+    }
+    .footer-content-right ul {
+        margin: auto;
+    }
+}

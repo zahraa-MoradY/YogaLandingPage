@@ -1,0 +1,832 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: openSans;
+    src: url(../fonts/opensans/SourceSansPro-Black.ttf) format("truetype");
+    font-weight: bolder;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: openSans;
+    src: url(../fonts/opensans/SourceSansPro-Bold.ttf) format('truetype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: openSans;
+    src: url(../fonts/opensans/SourceSansPro-Regular.ttf)format('truetype');
+    font-weight: normal;
+}
+
+button {
+    all: unset;
+    color: var(--lightColor);
+    text-align: center;
+}
+
+body {
+    --brandColor: #8742EB;
+    --primaryColor: #727272;
+    --lightColor: #ffffff;
+    --secondColor: #382F32;
+    --fontColor: #eeeeee;
+    --purpleGradient: linear-gradient(90deg, #8742EB 0%, #6800FF 100%);
+    --pinkGradient: linear-gradient(90deg, #EA5FB5 0%, #F456AD 100%);
+    background: var(--lightColor, #ffffff);
+    background: url('../img/BG.png');
+    color: var(--secondColor, #382F32);
+    font-family: 'opensans';
+}
+
+a {
+    text-decoration: none;
+    color: var(--secondColor, #382F32);
+}
+
+.lightColor {
+    color: var(--lightColor, #ffffff);
+}
+
+.grayColor {
+    color: var(--primaryColor, #727272);
+}
+
+.highlight {
+    color: var(--brandColor, #6800FF);
+}
+
+ul {
+    list-style: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.container {
+    width: 90%;
+}
+
+
+/* BUTTONS STYLE */
+
+.btn {
+    height: 45px;
+    left: 0px;
+    top: 0px;
+    border-radius: 50px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.largeBtn {
+    background: #6800FF;
+    background: linear-gradient(90deg, #8742EB 0%, #6800FF 100%);
+    background: -webkit-linear-gradient(90deg, #8742EB 0%, #6800FF 100%);
+    background: -o-linear-gradient(90deg, #8742EB 0%, #6800FF 100%);
+    width: 251px;
+    box-shadow: 0px 40px 60px 0px #8742EB33;
+    /* filter: drop-shadow(0px 40px 60px #8742EB33); */
+}
+
+.smallBtn {
+    background: #EA5FB5;
+    background: linear-gradient(90deg, #EA5FB5 0%, #F456AD 100%);
+    background: -webkit-linear-gradient(90deg, #EA5FB5 0%, #F456AD 100%);
+    background: -o-linear-gradient(90deg, #EA5FB5 0%, #F456AD 100%);
+    width: 231px;
+}
+
+
+/* TITLE OF SECTIONS */
+
+.title {
+    margin: 80px auto 40px;
+    text-align: center;
+    width: 60%;
+}
+
+.title h1 {
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 79px;
+}
+
+.title p {
+    line-height: 24px;
+}
+
+
+/* FLEX GAP */
+
+.flex-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-wrapper .item {
+    margin-left: 1rem;
+}
+
+.align-center {
+    align-items: center;
+}
+
+@supports (gap:1rem) {
+    .flex-wrapper {
+        gap: 1rem;
+    }
+    .flex-wrapper .item {
+        margin-left: 0;
+    }
+}
+
+
+/* ---HEADER SECTION--- */
+
+.header {
+    --dblock: block;
+    padding-top: 34px;
+    position: relative;
+    min-height: 600px;
+    overflow: hidden;
+}
+
+.header::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffffed;
+    z-index: 1;
+    display: var(--dblock);
+}
+
+.left-circle {
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    z-index: 2;
+}
+
+.right-circle {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+
+/* MENU */
+
+menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 212px;
+    height: 42px;
+    z-index: 10;
+}
+
+menu .right {
+    display: flex;
+    gap: 212px;
+}
+
+.banner {
+    width: 100%;
+    position: absolute;
+    top: 120px;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+}
+
+.bannerContent {
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bannerContent .textcontent {
+    text-align: center;
+    line-height: 79px;
+}
+
+.bannerContent h1 {
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.bannerContent .textcontent .combination {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.bannerContent .textcontent .combination h1 {
+    margin-right: 10px;
+}
+
+.bannerContent .textcontent p {
+    margin-bottom: 1rem;
+}
+
+.bannerContent .textcontent .combination .member {
+    background-color: var(--secondColor, #382F32);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 138px;
+    height: 45px;
+    font-size: 14px;
+    padding: 2px 10px;
+    border-radius: 50px;
+}
+
+header>img {
+    position: absolute;
+    z-index: 0;
+}
+
+header .left-image {
+    bottom: 5px;
+    left: 50px;
+}
+
+header .right-image {
+    bottom: 50px;
+    right: 50px;
+}
+
+
+/* CARD SECTION */
+
+.card-section {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 430px;
+    overflow: hidden;
+}
+
+.cards {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.cards-item-container {
+    border-radius: 15px;
+    width: calc(33% - 20px);
+}
+
+.cards-item {
+    height: 330px;
+    position: relative;
+}
+
+.plan-card {
+    background-color: var(--secondColor);
+}
+
+.plan-card .cards-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.plan-card .professional-plan {
+    width: 231px;
+    text-align: left;
+}
+
+.plan-card .professional-plan .plan {
+    display: flex;
+    padding-bottom: 10px;
+    color: var(--fontColor);
+}
+
+.plan-card .professional-plan .plan img {
+    width: 21px;
+    height: 22px;
+    margin-right: 12px;
+}
+
+.video-card {
+    background: var(--lightColor);
+    padding: 5px;
+    z-index: 2;
+}
+
+.video-card .top {
+    position: relative;
+    height: 55%;
+}
+
+.top>img {
+    width: 100%;
+    height: 100%;
+}
+
+.video-card .top .circle-img img {
+    position: absolute;
+    bottom: -10px;
+}
+
+.video-card .top .circle-img .img1 {
+    left: 14px;
+}
+
+.video-card .top .circle-img .img2 {
+    left: 38px;
+}
+
+.video-card .bottom {
+    height: 38%;
+    margin-left: 20px;
+}
+
+.video-card .bottom .text-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+}
+
+.video-card .bottom .text-content h3 {
+    line-height: 30px;
+    margin-bottom: 12px;
+}
+
+
+/* BANNER SECTION */
+
+.text-banner {
+    background: url(../img/rectangle.png) no-repeat center;
+    background-size: cover;
+    position: relative;
+    min-height: 360px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-banner .content {
+    width: 60%;
+    color: var(--fontColor);
+    text-align: center;
+    line-height: 26px;
+}
+
+.text-banner .content h2 {
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 59px;
+    margin-bottom: 20px;
+}
+
+
+/* DISCOUNT SECTION */
+
+.discount-section,
+.yogaClasses,
+.online-price,
+footer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.discount-section-content {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.discount-section-content .main {
+    width: 85%;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 40px;
+}
+
+.discount-section-content-button {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.player {
+    max-width: 100%;
+    height: inherit;
+    position: relative;
+    font-size: 0;
+    margin: 0 auto 40px;
+}
+
+.player__video {
+    width: 100%;
+}
+
+.play-icon {
+    position: absolute;
+    z-index: 2;
+    width: 94px;
+    height: 94px;
+    top: calc( 50% - 45px);
+    left: calc( 50% - 45px);
+    background: url(../img/Subtract.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgba(0, 0, 0, 0.767);
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+
+/* yoga class section */
+
+.yogaClasses .title {
+    margin: 40px auto 40px;
+    width: 50%;
+}
+
+.yogaClasses-content {
+    margin-bottom: 60px;
+}
+
+
+/* first card style */
+
+.cards .cards-item.first-card {
+    display: flex;
+    justify-content: center;
+}
+
+.cards-item .background-img {
+    width: 100%;
+    height: 100%;
+}
+
+.cards-item .background-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.cards-item .layer {
+    position: absolute;
+    top: 5%;
+    display: flex;
+    width: 95%;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90%;
+    align-items: center;
+}
+
+.cards-item .layer-top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+
+.cards-item .layer-top-row .complete-name span {
+    color: var(--lightColor);
+}
+
+.cards-item .layer-top-row .complete-name img {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.layer-bottom-row {
+    width: 90%;
+}
+
+.layer-bottom-row h4 {
+    color: var(--fontColor);
+    margin-bottom: 10px;
+}
+
+.layer-bottom-row h2 {
+    color: var(--lightColor);
+}
+
+
+/* finish first card style */
+
+
+/* ----------------------- */
+
+
+/* yoga class cards style */
+
+.yogaClasses .cards-item-container {
+    margin-bottom: 40px;
+}
+
+.yogaclass-cards-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 90%;
+    height: 45%!important;
+}
+
+.yogaclass-cards-bottom .bottom-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.yogaclass-cards-bottom .bottom-footer img {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+
+/* SECOND BANNER */
+
+.second-banner {
+    min-height: 600px;
+}
+
+.second-banner .main {
+    width: 100%;
+    min-height: 560px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.second-banner .main .content {
+    text-align: left;
+    width: 45%;
+    padding-top: 40px;
+}
+
+.second-banner .main .content-image {
+    width: 50%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.second-banner .main .content-image img {
+    width: 100%;
+    height: 100%;
+    margin-top: 40px;
+}
+
+.second-banner .main .content p {
+    margin-bottom: 10px;
+    line-height: 30px;
+}
+
+
+/* ONLINE CLASS SECTION */
+
+.online-price {
+    align-items: center;
+}
+
+.online-price-content {
+    margin-bottom: 80px;
+}
+
+.online-class-cards .item .content h3,
+.class-Schedules h3 {
+    font-size: 2em;
+}
+
+.online-class-cards .item .content h1 {
+    font-size: 4em;
+    line-height: 80px;
+}
+
+.online-class-cards .item {
+    border-radius: 15px;
+    background-color: var(--lightColor);
+    height: 350px;
+    margin-bottom: 25px;
+    position: relative;
+    transition: all ease-in .4s;
+    padding-bottom: 40px;
+}
+
+.online-class-cards .item:hover,
+.online-class-cards .item:active {
+    background-color: var(--brandColor);
+    color: var(--lightColor);
+}
+
+.online-class-cards .item .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: calc(100% - 60px);
+    font-weight: bold;
+}
+
+.online-class-cards .item .content .class-info {
+    text-align: center;
+}
+
+.item-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: var(--secondColor);
+    border-radius: 0 0 15px 15px;
+    transition: all ease-in.4s;
+    color: var(--lightColor);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 25px;
+}
+
+.online-class-cards .item:hover .item-footer {
+    background-color: var(--lightColor);
+    color: var(--secondColor);
+}
+
+.online-class-moreAbout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.online-class-moreAbout .learn-more {
+    width: 50%;
+    text-align: center;
+    margin: 20px 0 80px;
+}
+
+.online-class-moreAbout .learn-more a {
+    text-decoration: underline;
+    line-height: 25px;
+}
+
+.online-class-moreAbout .learn-more p {
+    margin: 20px;
+}
+
+.class-Schedules {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 110px;
+}
+
+.class-Schedules-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(221.43deg, #414A50 0%, #232123 100%);
+    width: 80%;
+    height: 100%;
+    border-radius: 20px;
+    color: var(--lightColor);
+}
+
+
+/* ------ FOOTER SECTION------ */
+
+footer {
+    background-color: var(--brandColor);
+    min-height: 600px;
+    align-items: center;
+    color: var(--lightColor);
+}
+
+.footer-content-main,
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content-left,
+.footer-content-right,
+.privacy,
+.copy-right {
+    width: 35%;
+}
+
+footer .left-container,
+footer .right-container {
+    width: 100%;
+}
+
+.links {
+    margin: 20px 0 50px;
+}
+
+.links a {
+    width: 22%;
+    padding: 5px;
+    color: var(--lightColor);
+}
+
+.signUp-email h3 {
+    line-height: 28px;
+    margin-bottom: 30px;
+}
+
+.email-input {
+    position: relative;
+}
+
+.email-input input {
+    background-color: transparent;
+    color: var(--fontColor);
+    border: none;
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #ffffff34;
+    /* border-bottom-color: ; */
+}
+
+.email-input input:focus,
+.email-input input:active {
+    border: none;
+    border-bottom: 1px solid #ffffff34;
+    outline: 0;
+}
+
+.email-input input::placeholder {
+    color: var(--lightColor);
+    position: absolute;
+    top: 0;
+}
+
+.email-input img {
+    position: absolute;
+    right: 5px;
+    top: 2px;
+}
+
+
+/* footer right side */
+
+.footer-content-right {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-list-items .item a {
+    color: var(--fontColor);
+    line-height: 25px;
+}
+
+.footer-list-items .item {
+    margin: 15px 0;
+}
+
+.footer-list-items .item:first-child {
+    color: var(--lightColor);
+    font-weight: bold;
+}
+
+.footer-bottom-row {
+    margin-top: 80px;
+}
+
+.footer-bottom-row-content,
+.privacy {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.privacy a {
+    color: var(--lightColor);
+    padding: 10px 0;
+}
